@@ -62,7 +62,7 @@ function App() {
           setIsLoadMain(true);
         })
         .catch((err) => {
-          // localStorage.removeItem("userId");
+          localStorage.removeItem("userId");
           console.error(err);
         })
         .finally(() => setIsLoadCheckToken(false));
@@ -92,7 +92,6 @@ function App() {
     setIsLoadLogin(true);
     auth.authorize(email, password)
       .then((data) => {
-        // console.log(data.token);
         if (data._id) {
           localStorage.setItem("userId", data._id);
           setIsLoggedIn(true);;

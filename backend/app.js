@@ -20,22 +20,17 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 
 const app = express();
 
-// const corsOptions = {
-//   credentials: true,
-//   origin: ['http://localhost:3001'],
-// };
-
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3001'],
+  origin: ['http://localhost:3001', 'https://mesto-russia.nomoredomainsrocks.ru'],
 }));
 
 // req limit
-// const limiter = rateLimit({
-//   windowMs: 15 * 60 * 1000,
-//   max: 100,
-// });
-// app.use(limiter);
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 150,
+});
+app.use(limiter);
 
 // security and validation
 app.use(helmet());

@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3000';
+// export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://mesto-russia.nomoredomainsrocks.ru';
 
 function checkResponse(res) {
   if (res.ok) {
@@ -31,14 +32,12 @@ export const authorize = (email, password) => {
     .then(checkResponse);
 };
 export const checkToken = () => {
-  // const token = localStorage.getItem('jwt');
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     credentials: 'include',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      // 'Authorization': `Bearer ${token}`
     }
   })
     .then((res) => checkResponse(res));
