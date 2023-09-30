@@ -110,7 +110,7 @@ class Api {
 
 const api = new Api({
   // baseUrl: 'http://localhost:3000',
-  baseUrl: 'https://mesto-russia.nomoredomainsrocks.ru'
+  baseUrl: 'https://api.mesto-russia.nomoredomainsrocks.ru'
 });
 
 export default api;

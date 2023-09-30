@@ -1,5 +1,5 @@
 // export const BASE_URL = 'http://localhost:3000';
-export const BASE_URL = 'https://mesto-russia.nomoredomainsrocks.ru';
+export const BASE_URL = 'https://api.mesto-russia.nomoredomainsrocks.ru';
 
 function checkResponse(res) {
   if (res.ok) {
