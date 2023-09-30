@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .navbar_active {
+    padding: 40px 0;
+    overflow: hidden;
+    height: 62px;
+    visibility: visible;
+    opacity: 1;
+    transition: all ease .5s;
+  }
+
+}

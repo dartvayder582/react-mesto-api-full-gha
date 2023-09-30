@@ -1,0 +1,93 @@
+/*normalize*/
+@import url(./vendor/normalize.css);
+
+/*font*/
+@import url(./vendor/font/inter.css);
+
+/*общие правила*/
+@import url(./blocks/page/page.css);
+@import url(./blocks/list-style/list-style.css);
+@import url(./blocks/link-style/link-style.css);
+
+/*navbar*/
+@import url(./blocks/hamburger-react/hamburger-react.css);
+@import url(./blocks/navbar/navbar.css);
+@import url(./blocks/navbar/_auth/navbar_auth.css);
+@import url(./blocks/navbar/_active/navbar_active.css);
+@import url(./blocks/navbar/__email/navbar__email.css);
+@import url(./blocks/navbar/__link/navbar__link.css);
+@import url(./blocks/navbar/__link/_auth/navbar__link_auth.css);
+
+/*header*/
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/_auth/header_auth.css);
+@import url(./blocks/header/__main-el/header__main-el.css);
+@import url(./blocks/header/__logo/header__logo.css);
+
+/* auth */
+@import url(./blocks/authentication/authentication.css);
+@import url(./blocks/authentication/__signin/authentication__signin.css);
+
+/*content*/
+@import url(./blocks/content/content.css);
+
+/*profile*/
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/profile/__avatar/profile__avatar.css);
+@import url(./blocks/profile/__avatar-button/profile__avatar-button.css);
+@import url(./blocks/profile/__info/profile__info.css);
+@import url(./blocks/profile/__text/profile__text.css);
+@import url(./blocks/profile/__name/profile__name.css);
+@import url(./blocks/profile/__job/profile__job.css);
+@import url(./blocks/profile/__edit-button/profile__edit-button.css);
+@import url(./blocks/profile/__add-button/profile__add-button.css);
+
+/*places*/
+@import url(./blocks/places/places.css);
+@import url(./blocks/place/place.css);
+@import url(./blocks/place/__image/place__image.css);
+@import url(./blocks/place/__image/_error/place__image_error.css);
+@import url(./blocks/place/__info/place__info.css);
+@import url(./blocks/place/__name/place__name.css);
+@import url(./blocks/place/__delete-button/place__delete-button.css);
+@import url(./blocks/place/__like/place__like.css);
+@import url(./blocks/place/__like-count/place__like-count.css);
+@import url(./blocks/place/__like-button/place__like-button.css);
+@import url(./blocks/place/__like-button/_active/place__like-button_active.css);
+
+/*footer*/
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
+
+/*popup*/
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_type/popup_type_figure.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__container/popup__container.css);
+@import url(./blocks/popup/__container/_form/popup__container_form.css);
+@import url(./blocks/popup/__container/_fig/popup__container_fig.css);
+@import url(./blocks/popup/__container/_infoTooltip/popup__container_infoTooltip.css);
+@import url(./blocks/popup/__close-button/popup__close-button.css);
+@import url(./blocks/popup/__figure-image/popup__figure-image.css);
+@import url(./blocks/popup/__figure-caption/popup__figure-caption.css);
+
+/*form*/
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/_auth/form_auth.css);
+@import url(./blocks/form/_popup/form_popup.css);
+@import url(./blocks/form/__heading/form__heading.css);
+@import url(./blocks/form/__heading/_theme/form__heading_theme_dark.css);
+@import url(./blocks/form/__input-container/form__input-container.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__input/_theme/form__input_theme_dark.css);
+@import url(./blocks/form/__input/_type/form__input_type_error.css);
+@import url(./blocks/form/__error/form__error.css);
+@import url(./blocks/form/__error/_visible/form__error_visible.css);
+@import url(./blocks/form/__submit-button/form__submit-button.css);
+@import url(./blocks/form/__submit-button/_theme/form__submit-button_theme_dark.css);
+@import url(./blocks/form/__submit-button/_disabled/form__submit-button_disabled.css);
+
+/*infoTooltip*/
+@import url(./blocks/infoTooltip/infoTooltip.css);
+@import url(./blocks/infoTooltip/infoTooltip__img/infoTooltip__img.css);
+@import url(./blocks/infoTooltip/infoTooltip__text/infoTooltip__text.css);

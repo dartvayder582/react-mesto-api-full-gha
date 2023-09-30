@@ -1,0 +1,5 @@
+.place__info {
+  padding: 23px 20px 28px;
+  display: flex;
+  align-items: center;
+}

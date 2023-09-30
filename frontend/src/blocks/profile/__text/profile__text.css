@@ -1,0 +1,17 @@
+.profile__text {
+  color: #fff;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__text {
+    text-align: center;
+    margin-left: 42px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .profile__text {
+    margin-left: 28px;
+  }
+}

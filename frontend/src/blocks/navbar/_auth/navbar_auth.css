@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+  .navbar_auth {
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+    flex-direction: column;
+    gap: 18px;
+    transition: all ease .5s;
+  }
+}

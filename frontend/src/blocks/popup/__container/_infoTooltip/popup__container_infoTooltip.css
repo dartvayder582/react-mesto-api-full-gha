@@ -1,0 +1,19 @@
+.popup__container_infoTooltip {
+  width: 430px;
+  min-height: 180px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__container_infoTooltip {
+    width: 330px;
+    min-height: 150px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .popup__container_infoTooltip {
+    width: 282px;
+  }
+}

@@ -1,0 +1,25 @@
+.hamburger-react {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.hamburger-react:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger-react {
+    display: block;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .hamburger-react {
+    margin-right: 27px;
+  }
+}
