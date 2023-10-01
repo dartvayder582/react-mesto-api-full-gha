@@ -5,7 +5,7 @@ require('dotenv').config();
 const { errors } = require('celebrate');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const publicRoutes = require('./routes/auth');
 const privateRoutes = require('./routes/index');
