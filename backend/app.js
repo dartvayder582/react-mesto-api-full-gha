@@ -11,6 +11,7 @@ const publicRoutes = require('./routes/auth');
 const privateRoutes = require('./routes/index');
 const auth = require('./middlewares/auth');
 const handleErrors = require('./middlewares/handleErrors');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 3000 } = process.env;
 
@@ -38,10 +39,23 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// req logger
+app.use(requestLogger);
+
+// crash-test
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 // auth and routes
 app.use(publicRoutes);
 app.use(auth);
 app.use(privateRoutes);
+
+// err logger
+app.use(errorLogger);
 
 // errors
 app.use(errors({ message: 'Переданы некорректные данные' }));
