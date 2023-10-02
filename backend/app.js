@@ -26,13 +26,6 @@ app.use(cors({
   origin: ['http://localhost:3001', 'https://mesto-russia.nomoredomainsrocks.ru'],
 }));
 
-// req limit
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 150,
-});
-app.use(limiter);
-
 // security and validation
 app.use(helmet());
 app.use(bodyParser.json());
@@ -42,12 +35,19 @@ app.use(cookieParser());
 // req logger
 app.use(requestLogger);
 
-// crash-test
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
+// req limit
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 150,
 });
+app.use(limiter);
+
+// crash-test
+// app.get('/crash-test', () => {
+//   setTimeout(() => {
+//     throw new Error('Сервер сейчас упадёт');
+//   }, 0);
+// });
 
 // auth and routes
 app.use(publicRoutes);

@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { celebrate, Joi } = require('celebrate');
-const { regexLink } = require('../utils/constants');
+const { signupValidation, signinValidation } = require('../utils/validationSchema');
 
 const {
   login,
@@ -9,25 +8,12 @@ const {
 
 router.post(
   '/signup',
-  celebrate({
-    body: Joi.object().keys({
-      email: Joi.string().required().email(),
-      password: Joi.string().required(),
-      name: Joi.string().min(2).max(30),
-      about: Joi.string().min(2).max(30),
-      avatar: Joi.string().regex(regexLink),
-    }),
-  }),
+  signupValidation,
   createUser,
 );
 router.post(
   '/signin',
-  celebrate({
-    body: Joi.object().keys({
-      email: Joi.string().required().email(),
-      password: Joi.string().required(),
-    }),
-  }),
+  signinValidation,
   login,
 );
 
